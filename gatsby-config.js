@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 module.exports = {
   siteMetadata: {
     title: `resume`,
@@ -18,6 +19,22 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/temp.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Saira Extra Condensed`,
+            variants: [`500`, `700`],
+          },
+          {
+            family: `Muli`,
+            variants: [`400`],
+            style: [`normal`],
+          },
+        ],
       },
     },
     'gatsby-plugin-sass',
