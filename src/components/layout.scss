@@ -15,7 +15,11 @@ body {
     padding-top: 0;
     padding-left: 9rem;
   }
+  
 }
+  .navbar-dropdown{
+    display: none;
+  }
 
 h1,
 h2,
@@ -46,6 +50,7 @@ p.lead {
   font-size: 1.15rem;
   font-weight: 400;
 }
+
 
 .subheading {
   text-transform: uppercase;
@@ -152,7 +157,29 @@ p.lead {
   #resume-section .resume-item .resume-date {
     min-width: 18rem;
   }
+
 }
+
+@media (max-width: 990px){
+  .navbar-dropdown{
+    display: block;
+
+  }
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #BD5D38;
+  border-color: #BD5D38;
+
+
+}
+
+.btn-secondary:hover{
+  background-color: #BD5D38;
+  border-color: #BD5D38;
+}
+
 .resume-date {
   min-width: 18rem;
 }
@@ -161,6 +188,8 @@ p.lead {
     padding-top: 8rem !important;
     padding-bottom: 3rem !important;
   }
+
+
 }
 
 .bg-primary {
