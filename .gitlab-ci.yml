@@ -5,7 +5,7 @@ deploy:
   stage: deploy
   environment:
     name: production
-    url: https://ms-gatsby-test.netlify.com
+    url: https://gatsby-resume.netlify.com
   only:
     - netlify-test
   script:
