@@ -7,7 +7,7 @@ deploy:
     name: production
     url: https://gatsby-resume.netlify.com
   only:
-    - netlify-test
+    - dev
   script:
     - npm i
     # your build command
