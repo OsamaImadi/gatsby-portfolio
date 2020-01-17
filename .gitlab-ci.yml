@@ -5,7 +5,7 @@ deploy:
   stage: deploy
   environment:
     name: production
-    url: https://nifty-thompson-192338.netlify.com/
+    url: https://ms-gatsby-test.netlify.com
   only:
     - netlify-test
   script:
