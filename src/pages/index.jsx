@@ -1,11 +1,21 @@
 import React from 'react'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+
+import AboutSection from '../components/about/about.component'
+import NavBar from '../components/navbar/navbar.component'
+
+
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Resume" />
-  </Layout>
+    <body id="page-top">
+      <NavBar />
+      <div className="container-fluid p-0">
+        <AboutSection />
+      </div>
+    </body>
+  </>
 )
 
 export default IndexPage
