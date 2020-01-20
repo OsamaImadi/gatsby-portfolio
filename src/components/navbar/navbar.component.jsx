@@ -6,6 +6,8 @@ import {
 } from 'reactstrap'
 
 import { Link } from 'gatsby'
+
+import menuItems from './menuData'
 import Example from '../dropdown/dropdown.component'
 import profileImage from '../../images/profileImage.png'
 
@@ -23,36 +25,14 @@ const NavBar = () => (
       <Example />
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <div className="navbar-nav">
-          <NavItem>
-            <NavLink to="/about" tag={Link} activeClassName="navbar__link--active">
-              About
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/experience" tag={Link} activeClassName="navbar__link--active">
-              Experience
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/education" tag={Link} activeClassName="navbar__link--active">
-              Education
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/skills" tag={Link} activeClassName="navbar__link--active">
-              Skills
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/interests" tag={Link} activeClassName="navbar__link--active">
-              Interests
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/awards" tag={Link} activeClassName="navbar__link--active">
-              Awards
-            </NavLink>
-          </NavItem>
+          {menuItems
+            .map((menuItem) => (
+              <NavItem>
+                <NavLink to={menuItem.link} tag={Link} activeClassName="navbar__link--active">
+                  {menuItem.item}
+                </NavLink>
+              </NavItem>
+            ))}
         </div>
       </div>
     </Nav>
