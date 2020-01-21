@@ -1,16 +1,16 @@
 import React from 'react'
-import SEO from '../components/seo'
+import SEO from '../components/commons/seo/index'
 
 
-import AboutSection from '../components/about/about.component'
-import NavBar from '../components/navbar/navbar.component'
+import AboutSection from '../components/about/index'
+import Header from '../components/commons/header/index'
 
 
 const IndexPage = () => (
   <>
     <SEO title="Resume" />
     <body id="page-top">
-      <NavBar />
+      <Header />
       <div className="container-fluid p-0">
         <AboutSection />
       </div>

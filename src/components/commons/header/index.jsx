@@ -8,21 +8,22 @@ import {
 import { Link } from 'gatsby'
 
 import menuItems from './menuData'
-import Example from '../dropdown/dropdown.component'
-import profileImage from '../../images/profileImage.png'
+import aboutData from '../../about/about.data'
+import MenuDropdown from '../../dropdown/index'
+import profileImage from '../../../../static/images/profileImage.png'
 
-import './navbar.styles.scss'
+import './_index.scss'
 
-const NavBar = () => (
-  <section id="navbar">
+const Header = () => (
+  <section id="header">
     <Nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <Link className="navbar-brand js-scroll-trigger" to="/about">
-        <span className="d-block d-lg-none">Clarence Taylor</span>
+        <span className="d-block d-lg-none">{aboutData.firstName + aboutData.lastName}</span>
         <span className="d-none d-lg-block">
           <img className="img-fluid img-profile rounded-circle mx-auto mb-2" src={profileImage} alt="" />
         </span>
       </Link>
-      <Example />
+      <MenuDropdown />
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <div className="navbar-nav">
           {menuItems
@@ -39,4 +40,4 @@ const NavBar = () => (
   </section>
 )
 
-export default NavBar
+export default Header

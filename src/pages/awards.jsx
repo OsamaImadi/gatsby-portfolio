@@ -1,13 +1,13 @@
 import React from 'react'
 
-import AwarsdsSection from '../components/awards/awards.component'
-import NavBar from '../components/navbar/navbar.component'
+import AwarsdsSection from '../components/awards/index'
+import Header from '../components/commons/header/index'
 
 import '../components/layout.scss'
 
 const AwardsPage = () => (
   <body id="page-top">
-    <NavBar />
+    <Header />
     <div className="container-fluid p-0">
       <AwarsdsSection />
     </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './skills.styles.scss'
+import './_index.scss'
 
 const SkillsSection = () => (
   <>
